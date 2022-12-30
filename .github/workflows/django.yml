@@ -30,7 +30,7 @@ jobs:
           POSTGRES_PASSWORD: 123
           POSTGRES_PORT: 5432
         ports:
-          - 127.0.0.1:0:5432
+          - 127.0.0.1:8000:5432
         options:
           --health-cmd pg_isready
           --health-interval 10s
