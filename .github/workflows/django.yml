@@ -45,4 +45,4 @@ jobs:
         pip install -r requirements/local.txt
     - name: Run Tests
       run: |
-        python manage.py test
+        python manage.py test --settings=config.settings.test
