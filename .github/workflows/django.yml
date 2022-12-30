@@ -27,6 +27,7 @@ jobs:
           POSTGRES_DB: recipify
           POSTGRES_USER: maddy
           POSTGRES_PASSWORD: 123
+          POSTGRES_PORT: 5432
         ports:
           - 127.0.0.1:0:5432
         options:
