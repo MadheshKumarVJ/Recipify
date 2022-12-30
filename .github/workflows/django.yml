@@ -24,9 +24,9 @@ jobs:
         # Docker Hub image
         image: postgres:12-alpine
         env:
-          POSTGRES_DB: testpress
-          POSTGRES_USER: testpress
-          POSTGRES_PASSWORD: testpress
+          POSTGRES_DB: recipify
+          POSTGRES_USER: maddy
+          POSTGRES_PASSWORD: 123
         ports:
           - 127.0.0.1:0:5432
         options:
