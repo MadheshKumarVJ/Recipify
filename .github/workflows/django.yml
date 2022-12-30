@@ -24,13 +24,12 @@ jobs:
         # Docker Hub image
         image: postgres:12-alpine
         env:
-          POSTGRES_HOST: postgres
           POSTGRES_DB: recipify
           POSTGRES_USER: maddy
           POSTGRES_PASSWORD: 123
-          POSTGRES_PORT: 5432
         ports:
-          - 127.0.0.1:8000:5432
+          # Maps tcp port 5432 on service container to the host
+          - 5432:5432
         options:
           --health-cmd pg_isready
           --health-interval 10s
