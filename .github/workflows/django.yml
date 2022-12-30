@@ -45,5 +45,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements/local.txt
     - name: Run Tests
+      env:
+        DB_PORT: ${{ job.services.postgres.ports['5432'] }}
       run: |
         python manage.py test --settings=config.settings.test
