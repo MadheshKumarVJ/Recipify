@@ -11,12 +11,12 @@ jobs:
 
     runs-on: ubuntu-latest
     env:
-      DATABASE_ENGINE: ${{ secrets.DATABASE_ENGINE }}
-      DATABASE_NAME: ${{ secrets.DATABASE_NAME }}
-      DATABASE_PASSWORD: ${{ secrets.DATABASE_PASSWORD }}
-      DATABASE_USER: ${{ secrets.DATABASE_USER }}
-      DEBUG: ${{ secrets.DEBUG }}
-      SECRET_KEY: ${{ secrets.SECRET_KEY }}
+      DATABASE_ENGINE: ${{ secrets.Django.DATABASE_ENGINE }}
+      DATABASE_NAME: ${{ secrets.Django.DATABASE_NAME }}
+      DATABASE_PASSWORD: ${{ secrets.Django.DATABASE_PASSWORD }}
+      DATABASE_USER: ${{ secrets.Django.DATABASE_USER }}
+      DEBUG: ${{ secrets.Django.DEBUG }}
+      SECRET_KEY: ${{ secrets.Django.SECRET_KEY }}
     services:
       # Label used to access the service container
       postgres:
