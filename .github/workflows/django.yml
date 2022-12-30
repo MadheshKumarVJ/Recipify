@@ -24,7 +24,7 @@ jobs:
         # Docker Hub image
         image: postgres:12-alpine
         env:
-          POSTGRES_HOST: localhost
+          POSTGRES_HOST: postgres
           POSTGRES_DB: recipify
           POSTGRES_USER: maddy
           POSTGRES_PASSWORD: 123
