@@ -18,7 +18,12 @@
         <div class="py-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:py-5">
           {% for ingredient in recipe.ingredients.all %}
           <dt class="text-sm font-medium text-gray-500"> </dt>
-          <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0"> {{ ingredient }} Quantity {{ ingredient.quantity }} {{ ingredient.is_optional }}</dd>
+          <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0"> {{ ingredient }} Quantity {{ ingredient.quantity }}
+            {% if ingredient.optional %}
+            <b>optional</b>
+            {% endif %}
+
+            </dd>
           {% endfor %}
 
 
