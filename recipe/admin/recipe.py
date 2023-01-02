@@ -12,7 +12,6 @@ class RecipeAdmin(admin.ModelAdmin):
         "difficulty_level",
         "created",
         "modified",
-        "ingredients",
     )
     list_filter = ("difficulty_level", "created", "author")
     search_fields = ("title", "author", "calories")
