@@ -2,9 +2,26 @@
 
 {% block content %}
 
-<div class="py-32 text-center">
-	<h2 class="font-extrabold text-3xl">Hi {{ user.get_username }}</h2>
-	<p>Welcome to Recipify </p>
-</div>
+<div>
+	{% for recipe in recipies %}
+	<ul role="list" class="divide-y divide-gray-200">
+	  <li class="py-4">
+		<div class="flex space-x-3">
+		  <img class="h-6 w-6 rounded-full" src="https://upload.wikimedia.org/wikipedia/commons/1/15/Recipe_logo.jpeg" alt="">
+		  <div class="flex-1 space-y-1">
+			<div class="flex items-center justify-between">
+			  <h3 class="text-sm font-medium">{{ recipe.title }}</h3>
+			  <p class="text-sm text-gray-500">Difficulty Level : {{ recipe.difficulty_level }}</p>
+			</div>
+			<p class="text-sm text-gray-500">Created By {{ recipe.author }}</p>
+			<p class="text-sm text-gray-500">Created on {{ recipe.created }}</p>
+		  </div>
+		</div>
+	  </li>
+  	</ul>
+  </div>
+  {% endfor %}
+
+  {% include "pagination.html" with page=page_obj %}
 
 {% endblock %}
